@@ -49,11 +49,8 @@ $: groupsVisible = groups
 
 <style lang="scss">
 .photo-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
-
+    --gap: 1rem;
+    text-align: center;
     background-color: lightblue;
 
     max-width: 120ch;
@@ -66,8 +63,10 @@ $: groupsVisible = groups
 }
 
 .photo-grid .item {
+    display: inline-block;
     background-color: ivory;
     padding: 0.2rem 0.2rem 1rem;
+    margin: calc(var(--gap) / 2);
 
     .title-image {
         width: 12rem;
